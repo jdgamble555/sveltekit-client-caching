@@ -26,7 +26,7 @@ const posts = [
 
 export const GET = (async ({ url }) => {
 
-    const id = Number(url.searchParams.get('id')) || null;
+    const id = Number(url.searchParams.get('id'));
 
     await new Promise((res) => setTimeout(res, 2000));
 

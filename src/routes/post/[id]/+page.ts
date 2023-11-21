@@ -6,10 +6,8 @@ export const load = (async ({ fetch, params, url }) => {
     const { id } = params;
     const { pathname } = url;
 
-    const post = cacheFetch<Post>(pathname, () => fetch(`/data?id=${id}`));
-
     return {
-        post
+        post: cacheFetch<Post>(pathname, () => fetch(`/data?id=${id}`))
     };
 
 }) satisfies PageLoad;

@@ -2,7 +2,7 @@
 // for information about these interfaces
 declare global {
 	type Post = {
-		id: string;
+		id: number;
 		title: string;
 		content: string;
 		author: string;
